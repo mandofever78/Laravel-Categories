@@ -26,7 +26,7 @@ class CreateCategoriesTable extends Migration {
 			// $table->string('name', 255);
 			$table->string('name');
 			$table->string('slug');
-			$table->enum('status', array('DRAFT', 'APPROVED'))->default('DRAFT');
+			$table->enum('status', array('ENABLED', 'DISABLED'))->default('ENABLED');
 			$table->dateTime('published_date');
 
 			$table->timestamps();

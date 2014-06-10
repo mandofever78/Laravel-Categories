@@ -1,17 +1,20 @@
 <?php namespace Fbf\LaravelCategories;
 
 use Baum\Node;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-/**
- * Category
- */
-class Category extends Node {
+class Category extends Eloquent implements SluggableInterface
+{
+
+	use SluggableTrait;
+
 
 	/**
 	 * Status values for the database
 	 */
-	const DRAFT = 'DRAFT';
-	const APPROVED = 'APPROVED';
+	const ENABLED = 'ENABLED';
+	const DISABLED = 'DISABLED';
 
 	/**
 	 * Table name.
@@ -30,7 +33,7 @@ class Category extends Node {
 		'separator' => '-',
 		'unique' => true,
 		'include_trashed' => true,
-	);
+		);
 
 	/**
 	 * Stores the old parent id before editing
@@ -100,8 +103,8 @@ class Category extends Node {
 	 */
 	public function scopeLive($query)
 	{
-		return $query->where('status', '=', self::APPROVED)
-			->where('published_date', '<=', \Carbon\Carbon::now());
+		return $query->where('status', '=', self::ENABLED)
+		->where('published_date', '<=', \Carbon\Carbon::now());
 	}
 
 	/**
