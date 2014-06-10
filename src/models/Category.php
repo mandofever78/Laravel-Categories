@@ -1,14 +1,9 @@
 <?php namespace Fbf\LaravelCategories;
 
 use Baum\Node;
-use Cviebrock\EloquentSluggable\SluggableInterface;
-use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class Category extends Node implements SluggableInterface
+class Category extends Node
 {
-
-	use SluggableTrait;
-
 
 	/**
 	 * Status values for the database
@@ -27,12 +22,6 @@ class Category extends Node implements SluggableInterface
 	 * Used for Cviebrock/EloquentSluggable
 	 * @var array
 	 */
-	protected $sluggable = array(
-		'build_from' => 'name',
-		'save_to' => 'slug',
-		'separator' => '-',
-		'unique' => true,
-		);
 
 	/**
 	 * Stores the old parent id before editing
@@ -48,7 +37,14 @@ class Category extends Node implements SluggableInterface
 	protected static function boot() {
 
 		parent::boot();
-
+		static::creating(function ($category) {
+			$slug = \Str::slug($category->name);
+			$increment = 0;
+			while(Category::where('slug',$slug)->count() > 0) {
+				$increment++;
+				$slug = \Str::slug($category->name.' '.$increment);
+			}
+		});	
 		static::updating(function ($category) {
 
 			// Baum triggers a parent move, which puts the item last in the list, even if the old and new parents are the same
