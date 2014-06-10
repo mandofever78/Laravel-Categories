@@ -4,7 +4,7 @@ use Baum\Node;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class Category extends Eloquent implements SluggableInterface
+class Category extends Node implements SluggableInterface
 {
 
 	use SluggableTrait;
