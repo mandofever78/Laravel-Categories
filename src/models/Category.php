@@ -44,6 +44,7 @@ class Category extends Node
 				$increment++;
 				$slug = \Str::slug($category->name.' '.$increment);
 			}
+			$category->slug = $slug;
 		});	
 		static::updating(function ($category) {
 
