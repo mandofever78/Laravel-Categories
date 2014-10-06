@@ -4,7 +4,6 @@ use Baum\Node;
 
 class Category extends Node
 {
-
 	/**
 	 * Status values for the database
 	 */
@@ -90,7 +89,6 @@ class Category extends Node
 		unset($this->{$this->getParentColumnName()});
 		static::$moveToNewParentId = FALSE;
 	}
-
 	/**
 	 * Adds a query scope to add conditions to query object
 	 *
