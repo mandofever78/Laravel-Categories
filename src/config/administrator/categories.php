@@ -21,7 +21,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'model' => 'Fbf\LaravelCategories\Category',
+	'model' => 'Mandofever78\LaravelCategories\Category',
 
 	/**
 	 * The columns array
@@ -40,7 +40,7 @@ return array(
 		),
 		'status' => array(
 			'title' => 'Status',
-			'select' => "CASE (:table).status WHEN '".Fbf\LaravelBlog\Post::APPROVED."' THEN 'Approved' WHEN '".Fbf\LaravelBlog\Post::DRAFT."' THEN 'Draft' END",
+			'select' => "CASE (:table).status WHEN '".Mandofever78\LaravelBlog\Post::APPROVED."' THEN 'Approved' WHEN '".Mandofever78\LaravelBlog\Post::DRAFT."' THEN 'Draft' END",
 		),
 		'updated_at' => array(
 			'title' => 'Last Updated'
@@ -73,8 +73,8 @@ return array(
 			'type' => 'enum',
 			'title' => 'Status',
 			'options' => array(
-				Fbf\LaravelBlog\Post::DRAFT => 'Draft',
-				Fbf\LaravelBlog\Post::APPROVED => 'Approved',
+				Mandofever78\LaravelBlog\Post::DRAFT => 'Draft',
+				Mandofever78\LaravelBlog\Post::APPROVED => 'Approved',
 			),
 		),
 		'published_date' => array(
@@ -111,8 +111,8 @@ return array(
 			'type' => 'enum',
 			'title' => 'Status',
 			'options' => array(
-				Fbf\LaravelBlog\Post::DRAFT => 'Draft',
-				Fbf\LaravelBlog\Post::APPROVED => 'Approved',
+				Mandofever78\LaravelBlog\Post::DRAFT => 'Draft',
+				Mandofever78\LaravelBlog\Post::APPROVED => 'Approved',
 			),
 		),
 		'published_date' => array(

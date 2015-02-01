@@ -1,4 +1,4 @@
-<?php namespace Fbf\LaravelCategories;
+<?php namespace Mandofever78\LaravelCategories;
 
 use Baum\Node;
 
@@ -16,7 +16,7 @@ class Category extends Node
 	 *
 	 * @var string
 	 */
-	protected $table = 'fbf_categories';
+	protected $table = 'mandofever78_categories';
 
 	/**
 	 * Used for Cviebrock/EloquentSluggable

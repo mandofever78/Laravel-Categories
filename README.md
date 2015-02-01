@@ -16,7 +16,7 @@ e.g. a hierarchy for blog categories and another for product categories
 
 Add the following to you composer.json file (Recommend swapping "dev-master" for the latest release)
 
-    "fbf/laravel-categories": "dev-master"
+    "mandofever78/laravel-categories": "dev-master"
 
 Run
 
@@ -24,21 +24,21 @@ Run
 
 Add the following to app/config/app.php
 
-    'Fbf\LaravelCategories\LaravelCategoriesServiceProvider'
+    'Mandofever78\LaravelCategories\LaravelCategoriesServiceProvider'
 
 Publish the config
 
-    php artisan config:publish fbf/laravel-categories
+    php artisan config:publish mandofever78/laravel-categories
 
 Run the migration
 
-    php artisan migrate --package="fbf/laravel-categories"
+    php artisan migrate --package="mandofever78/laravel-categories"
 
 Ensure the categories `types` are set correctly in the config file.
 
 Run the seed (this will create root nodes for each of your category `types`)
 
-	php artisan db:seed --class="Fbf\LaravelCategories\CategoriesTableBaseSeeder"
+	php artisan db:seed --class="Mandofever78\LaravelCategories\CategoriesTableBaseSeeder"
 
 Build your menus in the database, or if you are using FrozenNode's Laravel Administrator, see the info below
 

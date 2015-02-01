@@ -1,4 +1,4 @@
-<?php namespace Fbf\LaravelCategories;
+<?php namespace Mandofever78\LaravelCategories;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class LaravelCategoriesServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('fbf/laravel-categories');
+		$this->package('mandofever78/laravel-categories');
 
 		\App::register('Baum\BaumServiceProvider');
 		\App::register('Cviebrock\EloquentSluggable\SluggableServiceProvider');

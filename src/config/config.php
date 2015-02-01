@@ -12,6 +12,16 @@ return array(
 			// a tree in HTML for example.
 		),
 
+        'Products' => array(
+            // There will probably be more configuration options in here in the future, when I add methods to render a
+            // a tree in HTML for example.
+        ),
+
+        'Corner' => array(
+            // There will probably be more configuration options in here in the future, when I add methods to render a
+            // a tree in HTML for example.
+        ),
+
 	),
 
 );

@@ -1,5 +1,5 @@
 {
-    "name": "fbf/laravel-categories",
+    "name": "mandofever78/laravel-categories",
     "description": "A Laravel 4 package for adding one or more types of category hierarchies to a website",
     "keywords": ["laravel","categories","hierarchy"],
     "authors": [
@@ -19,7 +19,7 @@
             "src/seeds"
         ],
         "psr-0": {
-            "Fbf\\LaravelCategories\\": "src/"
+            "Mandofever78\\LaravelCategories\\": "src/"
         }
     },
     "minimum-stability": "dev"

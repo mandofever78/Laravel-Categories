@@ -11,7 +11,7 @@ class CreateCategoriesTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('fbf_categories', function(Blueprint $table) {
+		Schema::create('mandofever78_categories', function(Blueprint $table) {
 			// These columns are needed for Baum's Nested Set implementation to work.
 			// Column names may be changed, but they *must* all exist and be modified
 			// in the model.
@@ -46,7 +46,7 @@ class CreateCategoriesTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('fbf_categories');
+		Schema::drop('mandofever78_categories');
 	}
 
 }
